@@ -44,7 +44,10 @@ require('lspconfig')['tsserver'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
-require('lspconfig')['csharp_ls'].setup{
+local pid = vim.fn.getpid()
+local omnisharp_bin = "/home/kazordomo/omnisharp/run"
+require('lspconfig')['omnisharp'].setup{
+    cmd = { omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid) };
     on_attach = on_attach,
     flags = lsp_flags,
 }
