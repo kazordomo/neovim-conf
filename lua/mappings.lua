@@ -14,10 +14,15 @@ for _, i in ipairs({"h", "j", "k", "l"}) do
 end
 
 map("i", "kj", "<esc>")
-map("n", "<leader>gg", ":LazyGit<CR>", {silent = true})
 map("n", "<leader>o", "o<esc>^Da")
 map("n", "<leader>O", "O<esc>^Da")
+
+-- LazyGit
+map("n", "<leader>gg", ":LazyGit<CR>", {silent = true})
 
 -- Telescope
 map("n", "<c-p>", [[<cmd>Telescope git_files<CR>]], { silent = true})
 map("n", "<leader><c-p>", [[<cmd>Telescope find_files<CR>]], { silent = true})
+
+-- NerdTree
+map("n", "<c-b>", ":NERDTreeToggle<CR>", {silent = true})
