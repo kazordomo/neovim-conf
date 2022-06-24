@@ -2,6 +2,7 @@ require ('plugins.lsp')
 require ('plugins.tree-sitter')
 require ('plugins.autocomplete')
 require ('plugins.smart-term')
+require ('plugins.autopairs')
 
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
@@ -17,6 +18,10 @@ return require('packer').startup(function()
 
     use 'morhetz/gruvbox'
 
+    use 'windwp/nvim-autopairs'
+
+	use 'b3nj5m1n/kommentary'
+
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     use {
@@ -24,9 +29,9 @@ return require('packer').startup(function()
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use 'jiangmiao/auto-pairs'
-
     use 'preservim/nerdtree'
+
+	use 'kdheepak/lazygit.nvim'
 
     use 'airblade/vim-gitgutter'
 

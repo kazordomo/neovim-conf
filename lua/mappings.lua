@@ -16,6 +16,7 @@ end
 map("i", "kj", "<esc>")
 map("n", "<leader>o", "o<esc>^Da")
 map("n", "<leader>O", "O<esc>^Da")
+map("n", "<esc>", ":noh<CR>")
 
 -- LazyGit
 map("n", "<leader>gg", ":LazyGit<CR>", {silent = true})
