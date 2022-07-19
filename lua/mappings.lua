@@ -26,4 +26,4 @@ map("n", "<c-p>", [[<cmd>Telescope git_files<CR>]], { silent = true})
 map("n", "<leader><c-p>", [[<cmd>Telescope find_files<CR>]], { silent = true})
 
 -- NerdTree
-map("n", "<c-b>", ":NERDTreeToggle<CR>", {silent = true})
+map("n", "<leader><c-b>", ":NERDTreeToggle<CR>", {silent = true})
