@@ -1,26 +1,23 @@
 require('plugins.init')
 require('mappings')
 
-local o_s = vim.o
-
-local function opt(o, v, scopes)
-  scopes = scopes or {o_s}
-  for _, s in ipairs(scopes) do s[o] = v end
-end
-
 -- colorscheme
-opt('background', 'dark')
 vim.cmd [[colorscheme gruvbox]]
 
-opt('relativenumber', true, window)
-opt('number', true, window)
-opt('nuw', 5, window)
-opt('textwidth', 100, buffer)
-opt('showmatch', true)
-opt('ignorecase', true)
-opt('tabstop', 4, buffer)
-opt('softtabstop', 4, buffer)
-opt('shiftwidth', 4, buffer)
-opt('autoindent', true, buffer)
-opt('nohlsearch', true, window)
--- opt('expandtab', true, buffer)
+-- vim.wo.number = true
+vim.wo.relativenumber = true
+vim.wo.nuw = 5
+
+vim.o.textwidth = 100
+vim.o.showmatch = true
+vim.o.tabstop = 4
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.autoindent = true
+
+vim.o.hlsearch = false
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
+vim.o.formatoptions = vim.o.formatoptions .. 'tcrqnj' -- ?? do not append with comment on new line
+

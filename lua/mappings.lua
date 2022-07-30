@@ -19,11 +19,11 @@ map("n", "<leader>O", "O<esc>^Da")
 map("n", "<esc>", ":noh<CR>")
 
 -- LazyGit
-map("n", "<leader>gg", ":LazyGit<CR>", {silent = true})
+map("n", "<leader>lg", ":LazyGit<CR>", {silent = true})
 
 -- Telescope
 map("n", "<c-p>", [[<cmd>Telescope git_files<CR>]], { silent = true})
 map("n", "<leader><c-p>", [[<cmd>Telescope find_files<CR>]], { silent = true})
 
 -- NerdTree
-map("n", "<leader><c-b>", ":NERDTreeToggle<CR>", {silent = true})
+map("n", "<leader>b", ":NERDTreeToggle<CR>", {silent = true})
