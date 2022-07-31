@@ -8,22 +8,19 @@ function map(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- map ctrl + vim move keys to move between splits/panes
-for _, i in ipairs({"h", "j", "k", "l"}) do
-    map("n", "<c-" .. i .. ">", ":wincmd " .. i .."<CR>", {silent = true})
-end
-
 map("i", "kj", "<esc>")
-map("n", "<leader>o", "o<esc>^Da")
-map("n", "<leader>O", "O<esc>^Da")
-map("n", "<esc>", ":noh<CR>")
+
+map("n", "<C-h>", "<C-w><C-h>")
+map("n", "<C-j>", "<C-w><C-j>")
+map("n", "<C-k>", "<C-w><C-k>")
+map("n", "<C-l>", "<C-w><C-l>")
 
 -- LazyGit
 map("n", "<leader>lg", ":LazyGit<CR>", {silent = true})
 
 -- Telescope
-map("n", "<c-p>", [[<cmd>Telescope git_files<CR>]], { silent = true})
-map("n", "<leader><c-p>", [[<cmd>Telescope find_files<CR>]], { silent = true})
+map("n", "<leader>f", [[<cmd>Telescope git_files<CR>]], { silent = true})
+map("n", "<leader>F", [[<cmd>Telescope find_files<CR>]], { silent = true})
 
 -- NerdTree
 map("n", "<leader>b", ":NERDTreeToggle<CR>", {silent = true})
