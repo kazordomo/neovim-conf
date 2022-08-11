@@ -2,9 +2,10 @@ require('plugins.init')
 require('mappings')
 
 -- colorscheme
-vim.cmd [[colorscheme gruvbox]]
+vim.cmd [[colorscheme dracula]]
 vim.background = "dark"
 
+-- ignore prepending comment to new line
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 
@@ -22,3 +23,6 @@ vim.o.smartindent = true
 vim.o.hlsearch = false
 vim.o.ignorecase = true
 vim.o.smartcase = true
+
+-- lowered to get whichkey-plugin to appear faster
+vim.opt.timeoutlen = 200

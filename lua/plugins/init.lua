@@ -3,6 +3,8 @@ require ('plugins.tree-sitter')
 require ('plugins.autocomplete')
 require ('plugins.smart-term')
 require ('plugins.autopairs')
+require ('plugins.which-key')
+require ('plugins.dap')
 
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
@@ -16,7 +18,8 @@ return require('packer').startup(function()
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
-    use 'morhetz/gruvbox'
+    -- use 'morhetz/gruvbox'
+	use 'Mofiqul/dracula.nvim'
 
     use 'windwp/nvim-autopairs'
 
@@ -36,4 +39,8 @@ return require('packer').startup(function()
     use 'airblade/vim-gitgutter'
 
     use 'sychen52/smart-term-esc.nvim' -- remap instead when less lazy
+
+	use 'folke/which-key.nvim'
+
+	use 'mfussenegger/nvim-dap'
 end)
