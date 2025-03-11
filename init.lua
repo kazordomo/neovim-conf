@@ -1,10 +1,6 @@
 require('plugins.init')
 require('mappings')
 
--- colorscheme
-vim.cmd [[colorscheme dracula]]
-vim.background = "dark"
-
 -- ignore prepending comment to new line
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")

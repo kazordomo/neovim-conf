@@ -17,10 +17,26 @@ require("lazy").setup({
   "hrsh7th/nvim-cmp", -- Autocompletion plugin
   "hrsh7th/cmp-nvim-lsp", -- LSP source for nvim-cmp
   "saadparwaiz1/cmp_luasnip", -- Snippets source for nvim-cmp
-  "L3MON4D3/LuaSnip", -- Snippets plugin
-  "Mofiqul/dracula.nvim",
   "windwp/nvim-autopairs",
   "b3nj5m1n/kommentary",
+  {
+	"L3MON4D3/LuaSnip",
+	-- follow latest release.
+	version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	-- install jsregexp (optional!).
+	build = "make install_jsregexp"
+  },
+  {
+    'projekt0n/github-nvim-theme',
+    name = 'github-theme',
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      require('github-theme').setup({})
+
+      vim.cmd('colorscheme github_light_default')
+    end,
+  },  
   { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
   {
     "nvim-telescope/telescope.nvim",
